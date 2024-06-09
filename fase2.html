@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+    <section class="enigma">
+        </section>
+
+    <section class="formulario">
+       
+        <form action="#">
+            <input type="password" id="senha" name="senha" placeholder="Senha">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
+<script>
+    const form = document.querySelector('form');
+    const inputSenha = document.getElementById('senha');
+    const linkCorreto = 'https://sites.google.com/view/skiribitoilet/in%C3%ADcio';
+    const linkErro = 'https://whiteblade.my.canva.site/errou-tente-novamente';
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const senhaDigitada = inputSenha.value;
+
+        if (senhaDigitada === '45') {
+            window.location.href = linkCorreto;
+        } else {
+            window.location.href = linkErro;
+        }
+    });
+</script>
